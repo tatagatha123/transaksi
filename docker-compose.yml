@@ -9,7 +9,7 @@ services:
         condition: service_completed_successfully
     environment:
       SPRING_PROFILES_ACTIVE: docker
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mydb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Jakarta
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/penjualan?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Jakarta
       SPRING_DATASOURCE_USERNAME: myuser
       SPRING_DATASOURCE_PASSWORD: mypassword
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: mydb
+      MYSQL_DATABASE: penjualan
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
     volumes:
