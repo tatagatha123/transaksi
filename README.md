@@ -1,19 +1,72 @@
-# API berbasis Spring Boot 🚀
-Selamat datang di repositori Github saya! 👋 Ini adalah aplikasi Transaksi Jual Beli di supermarket berbasis pemograman **Java** dengan framework **Spring Boot**. Basis data yang digunakan dalam proyek ini adalah **mySQL** ya. Proyek ini sangat cocok untuk kalian yang ingin belajar membuat API berbasis Java. Sangat cocok bagi yang masih bingung membuat portofolio. Di sini aplikasinya memang tidak sepenuhnya jadi. Oleh karena itu, silahkan ATM (Amati Tiru Modifikasi) :smiley:
+# Aplikasi Transaksi Penjualan (Spring Boot)
 
-## 🎯Tech stack aplikasi ini:
-- Project **Maven**
-- Language Java dengan **JDK 25**
-- **Spring Boot 4.0.0**
-- Packaging **JAR**
-- Configuration **YAML**
-
-## 📝 License
-
-Project ini menggunakan MIT License - bebas dipake buat belajar!
+REST API transaksi penjualan menggunakan **Spring Boot** dan **MySQL** dengan relasi antar tabel, manajemen stok otomatis, keamanan token, Swagger, dan GitHub Actions.
 
 ---
 
-**Happy Coding! 🚀✨**
+## Fitur Utama
+- CRUD lengkap (POST, GET, PUT, DELETE) untuk semua tabel
+- Relasi database (Transaksi ↔ Detail ↔ Barang)
+- Stok otomatis:
+  - Berkurang saat detail transaksi ditambah
+  - Kembali saat detail / transaksi dihapus
+- Validasi bisnis (stok tidak boleh minus, barang tidak boleh duplicate)
+- JWT Token
+- Swagger UI
+- GitHub Actions (CI)
 
-*Made with ❤️ for CCIT Students*
+---
+
+## Teknologi
+- Java 25  
+- Spring Boot 4  
+- Spring Data JPA  
+- MySQL  
+- Swagger (springdoc-openapi)  
+- GitHub Actions  
+
+---
+
+## Swagger
+# Aplikasi Transaksi Penjualan (Spring Boot)
+
+REST API transaksi penjualan menggunakan **Spring Boot** dan **MySQL** dengan relasi antar tabel, manajemen stok otomatis, keamanan token, Swagger, dan GitHub Actions.
+
+---
+
+## Fitur Utama
+- CRUD lengkap (POST, GET, PUT, DELETE) untuk semua tabel
+- Relasi database (Transaksi ↔ Detail ↔ Barang)
+- Stok otomatis:
+  - Berkurang saat detail transaksi ditambah
+  - Kembali saat detail / transaksi dihapus
+- Validasi bisnis (stok tidak boleh minus, barang tidak boleh duplicate)
+- JWT Token
+- Swagger UI
+- GitHub Actions (CI)
+
+---
+
+## Teknologi
+- Java 25  
+- Spring Boot 4  
+- Spring Data JPA  
+- MySQL  
+- Swagger (springdoc-openapi)  
+- GitHub Actions  
+
+---
+
+## Swagger
+http://localhost:8080/swagger-ui/index.html
+
+---
+
+## Token (Demo)
+Gunakan token berikut untuk testing di Swagger:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb3NlbiIsIm5hbWUiOiJST0xFX1VTRVIifQ.edbUQbRjQ632M63OM3kJnPVTIT1bYExYxKei4oIJ5F8
+
+---
+
+## GitHub Actions
+CI berjalan otomatis saat **push / pull request ke branch `main`** dengan perintah: ./mvnw clean verify

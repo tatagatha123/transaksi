@@ -58,6 +58,22 @@ INSERT IGNORE INTO `pemasok` (`id_pemasok`, `nama`, `alamat`, `telepon`, `email`
 ('S007', 'Indo Mandiri', 'Jl. Muria No. 34B', '081914057581', 'mandirindo@gomandiri.org'),
 ('S008', 'Karya Indah', 'Jl. Merapi No. 35B', '081328084248', NULL);
 
+-- Tabel transaksi pembelian
+CREATE TABLE transaksi_pembelian (
+  id_transaksi VARCHAR(20) PRIMARY KEY,
+  tgl_transaksi DATE NOT NULL,
+  total DECIMAL(15,2) NOT NULL DEFAULT 0,
+
+  id_pemasok VARCHAR(20) NOT NULL,
+
+  CONSTRAINT fk_transaksi_pemasok
+    FOREIGN KEY (id_pemasok)
+    REFERENCES pemasok(id_pemasok)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+);
+
+
 -- Tabel KARYAWAN
 CREATE TABLE IF NOT EXISTS `karyawan` (
   `id_karyawan` char(4) NOT NULL,
